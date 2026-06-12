@@ -10,24 +10,38 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">معرض أعمالي</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">السيرة الذاتية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="store.html">المتجر</a></li>
-                    <li class="nav-item"><a class="nav-link" href="calculator.html">الحاسبة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">استشارة / تواصل</a></li>
+        <div class="container d-flex align-items-center justify-content-between">
+            
+            <a class="navbar-brand fw-bold text-warning" href="index.html">معرض أعمالي</a>
+            
+            <div class="d-flex align-items-center">
+                
+                <div id="cartBtnContainer" class="me-2 me-lg-0 order-lg-2">
+                    <span class="btn btn-warning position-relative fw-bold">
+                        🛒 السلة
+                        <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </span>
+                </div>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+            
+            <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-end py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-3" id="nav-index" href="index.html">السيرة الذاتية</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" id="nav-blog" href="blog.html">المدونة</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" id="nav-store" href="store.html">المتجر</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" id="nav-calculator" href="calculator.html">الحاسبة</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" id="nav-contact" href="contact.html">استشارة / تواصل</a></li>
                 </ul>
             </div>
-            <span class="btn btn-warning position-relative fw-bold">
-                🛒 السلة
-                <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-            </span>
+    
         </div>
     </nav>
-
+    
     <main class="container my-5">
         <h2 class="text-center mb-5 fw-bold">قالب متجر ملحقات المطورين</h2>
         <div class="row g-4">

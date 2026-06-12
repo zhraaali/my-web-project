@@ -14,7 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // التحكم في ظهور واختفاء زر السلة عند فتح وإغلاق قائمة الموبايل
+const navbarCollapse = document.getElementById('navbarNav');
+const cartBtnContainer = document.getElementById('cartBtnContainer');
 
+if (navbarCollapse && cartBtnContainer) {
+    // عندما تبدأ القائمة المنسدلة بالانفتاح على الموبايل
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+        // نخفي السلة فقط على الشاشات الصغيرة باستخدام كلاسات البوتستراب
+        cartBtnContainer.classList.add('d-none', 'd-lg-block');
+    });
+
+    // عندما تنغلق القائمة المنسدلة بالكامل
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+        // نعيد إظهار السلة مجدداً
+        cartBtnContainer.classList.remove('d-none', 'd-lg-block');
+    });
+}
     // === 2. تفاعل الصفحة الثانية: قراءة المزيد في المدونة ===
     const blogButtons = document.querySelectorAll('.read-more-btn');
     blogButtons.forEach(button => {
@@ -86,4 +102,18 @@ function calculateResult() {
             clearCalc();
         }
     }
+}
+
+// تحديد الرابط النشط تلقائياً في النيفبار بناءً على اسم الصفحة الحالية
+const currentPath = window.location.pathname.split("/").pop();
+if (currentPath === "index.html" || currentPath === "") {
+    document.getElementById("nav-index")?.classList.add("active");
+} else if (currentPath === "blog.html") {
+    document.getElementById("nav-blog")?.classList.add("active");
+} else if (currentPath === "store.html") {
+    document.getElementById("nav-store")?.classList.add("active");
+} else if (currentPath === "calculator.html") {
+    document.getElementById("nav-calculator")?.classList.add("active");
+} else if (currentPath === "contact.html") {
+    document.getElementById("nav-contact")?.classList.add("active");
 }
