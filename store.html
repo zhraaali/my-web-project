@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض المنتجات الرقمية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">معرض أعمالي</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">السيرة الذاتية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="store.html">المتجر</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculator.html">الحاسبة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">استشارة / تواصل</a></li>
+                </ul>
+            </div>
+            <span class="btn btn-warning position-relative fw-bold">
+                🛒 السلة
+                <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </span>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-5 fw-bold">قالب متجر ملحقات المطورين</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 custom-card text-center">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300" class="card-img-top" alt="شاشة مكتبية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">شاشة عرض بدقة 4K</h5>
+                        <p class="text-primary fw-bold">350.00 $</p>
+                        <button class="btn btn-success add-to-cart-btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card text-center">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300" class="card-img-top" alt="لوحة مفاتيح ميكانيكية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">لوحة مفاتيح ميكانيكية</h5>
+                        <p class="text-primary fw-bold">89.00 $</p>
+                        <button class="btn btn-success add-to-cart-btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card text-center">
+                    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=300" class="card-img-top" alt="فأرة لاسلكية" style="height: 180px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">فأرة ألعاب لاسلكية</h5>
+                        <p class="text-primary fw-bold">45.00 $</p>
+                        <button class="btn btn-success add-to-cart-btn">أضف إلى السلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white-50 text-center py-3 mt-5">
+        <p class="mb-0">جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

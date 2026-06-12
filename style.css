@@ -1,0 +1,45 @@
+/* تنسيقات عامة للموقع */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* تخصيص الوضع الداكن */
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-theme .card {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-color: #333;
+}
+
+body.dark-theme .modal-content {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* تأثير حركي جميل للبطاقات */
+.custom-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* شاشة عرض الحاسبة */
+.calc-display {
+    height: 60px;
+    font-size: 1.5rem;
+    text-align: left;
+    direction: ltr;
+    background-color: #fff;
+}
